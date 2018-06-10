@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DeliveryRolls
+{
+    public class ShopsRequestDto
+    {
+        public DateTime Filled { get; set; }
+        public string FullName { get; set; }
+        public decimal Price { get; set; }
+        public Currency Currency { get; set; }
+    }
+    public enum Currency
+    {
+        Rubles
+    }
+    public class WayPoint
+    {
+        public string Address { get; set; }
+    }
+    public class ShopSelectionDto
+    {
+       
+       public List<Products> Products { get; set; }
+       public List<Accessories> Accessories { get; set; }
+    }
+
+    public enum Accessories
+    {
+       bag,
+       glasses,
+       eardrop,
+       umbrella,
+    }
+
+    public enum TypesOfProducts
+    {
+        shoes,
+        jeans,
+        t-shorts,
+        dress,
+    }
+
+    public class Program
+        {
+            static void Main()
+            { }
+        }
+}
